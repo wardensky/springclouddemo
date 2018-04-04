@@ -26,6 +26,7 @@ public class IndexController {
 	
 	@RequestMapping(value = "/find", method = RequestMethod.GET)
 	public @ResponseBody User find() {
-		return userDao.selectFirst();
+		User user = userDao.selectFirst();
+		return user;
 	}
 }

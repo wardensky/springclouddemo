@@ -1,12 +1,15 @@
 package com.example.demo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import org.apache.ibatis.type.Alias;
 
 @Alias("user")
-public class User {
+public class User implements Serializable{
 
+	private static final long serialVersionUID = 1L;
+	
 	private String id;
 	private String n1;
 	private String n2;
