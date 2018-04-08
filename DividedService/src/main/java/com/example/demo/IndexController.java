@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +28,7 @@ public class IndexController {
 	
 	@RequestMapping(value = "/find", method = RequestMethod.GET)
 	public @ResponseBody User find() {
+		User u = userDao.selectByN1("2-2-802");
 		User user = userDao.selectFirst();
 		return user;
 	}

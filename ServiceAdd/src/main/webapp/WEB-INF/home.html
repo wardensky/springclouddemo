@@ -1,0 +1,22 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Home</title>
+</head>
+<body>
+<h1>
+	Hello world!  WEB-INF
+</h1>
+
+<P th:title="${serverTime}" th:data-val="${serverTime}">  The time on the server is <span th:text="${serverTime}"></span>. </P>
+
+<a href="details.html" th:href="${url}" th:text="@{链接}">view</a>
+<div th:utext="${frag}"></div>
+
+<script th:inline="javascript">
+	let url = [[${url}]];
+	console.log(url);
+</script>
+</body>
+</html>

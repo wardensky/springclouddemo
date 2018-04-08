@@ -32,6 +32,7 @@ public interface UserDao {
 	  谨慎使用${}，因为${}会引起sql注入, 直接参与sql编译
 	*/
 	@Select("select id, n1, n2, n3, n4, n5, n6, create_time createTime from user where n1 = #{n1} limit 1")
+	@Options(useCache = false)
 	public User selectByN1(String n1);
 	
 	//关于trim https://blog.csdn.net/death05/article/details/53098328
