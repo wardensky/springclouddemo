@@ -11,6 +11,6 @@ public class AddController {
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	@ResponseBody
 	public int add(@PathParam("a") int a, @PathParam("b") int b) {
-		return a - b;
+		return a + b;
 	}
 }

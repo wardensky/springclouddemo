@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class AddController {
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	@ResponseBody
-	public String add(@PathParam("a") int a, @PathParam("b") int b) {
-		return a + b + "";
+	public int add(@PathParam("a") int a, @PathParam("b") int b) {
+		return a + b;
 	}
 	
 	@RequestMapping(value = "/home")
